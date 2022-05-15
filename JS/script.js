@@ -1,9 +1,8 @@
 
-
 let searchbar = document.createElement('input')
 searchbar.type="text"
 searchbar.id="searchbar"
-searchbar.placeholder="Search a breed to adopt..."
+searchbar.placeholder="Search a breed (for example-persian)"
 searchbar.setAttribute("onkeyup","searchFun()")
 document.getElementById("catsearch").appendChild(searchbar)
 
@@ -38,8 +37,7 @@ fetch("https://api.thecatapi.com/v1/breeds").then(res => {res.json()
             list += "<td>" + Data.name + "</td>";
             list += "<td>" + Data.temperament + "</td>";
             list += "<td>" + Data.origin + "</td>";
-            list += "<td>"+Data.description+ "</td>";
-            list += "<td><img src="+ Data.image.url + "> </td>";
+            list += "<td>"+ Data.description+ "</td>";
           });
           document.getElementById('data').innerHTML = list;
         }
