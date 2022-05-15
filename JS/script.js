@@ -49,7 +49,7 @@ fetch("https://api.thecatapi.com/v1/breeds").then(res => {res.json()
 const showbtn = document.getElementById("See");
 const Table = document.getElementById("details-table")
 showbtn.addEventListener('click', () => {
-  if(showbtn.innerHTML==="Adopt Now"){
+  if(showbtn.innerHTML==="Click here Adopt Now"){
     Table.style.display = "block"
     searchbar.style.display = "block"
   showbtn.innerHTML = "Hide details"
@@ -57,7 +57,7 @@ showbtn.addEventListener('click', () => {
   else if(showbtn.innerHTML==="Hide details"){
     Table.style.display = "none"
     searchbar.style.display = "none"
-  showbtn.innerHTML = "Adopt Now"
+  showbtn.innerHTML = "Click here Adopt Now"
   }
 })
 
